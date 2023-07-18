@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name='viewport' content="width=device-width initial-scale=1.0" >
+        <title> Сбор снеговой нагрузки</title>
+        
+    </head>
+    <body>
+        <p><a href="https://ru-ru.topographic-map.com/map-fqqb3l/%D0%91%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D1%8C/" target="_blank">Определение высотной отметки </a>
+          </p>
+        <p>Исходные данные к определнию снеговой нагрузки по СН 2.01.04:</p>
+        <p>Класс последствий (см. Прил.А табл.А.6 СН 2.01.01):</p>
+            <select name="kfl" type="text" class="i5">
+                <option value="0.9" >СС1</option>
+                <option value="1" selected>СС2</option>
+                <option value="1.1">СС3</option>
+            </select>
+    
+        <p><input size="5" name="A" type="text" class="i1" value="140">  - высотная отметка местности над уровнем моря,м; </p>
+        <p>Выберите снеговой район (см. НП.1 п.4.1 СН 2.01.04):</p>
+            <select name="Snow" type="text" class="i2">
+                <option value="1" selected>1а</option>
+                <option value="2">1б</option>
+                <option value="3">1в</option>
+                <option value="4">2а</option>
+                <option value="5">2б</option>
+                <option value="6">2в</option>
+                <option value="7">3</option>
+            </select>
+        <p>Выберите тип условий местности (см. табл.5.1 СН 2.01.04)</p>
+        <p>
+            <select name="Ce"type="text" class="i3">
+                <option value="0.8" >Не защищенные от ветра</option>
+                <option value="1" selected>Обычные</option>
+                <option value="1.2">Закрытые</option>
+            </select>
+        </p>  
+        <p>Угол наклона кровли (см. табл.5.2 СН 2.01.04):</p>
+        <p><input size="5" name="alpha" type="text" class="i4" value="0"/></p>
+    <button> Выполнить </button>
+  
+       <p> При расчете воздействия снеговых нагрузок на здания и сооружения, согласно 
+        <p>СН 2.01.04,снеговые нагрузки, действующие на покрытие, определяются по формуле:</p>
+        <p>S=μ<sub>i</sub>·C<sub>e</sub>·C<sub>t</sub>·S<sub>k</sub>·k<sub>FL</sub></p>
+        <p>где μ<sub>i</sub>=<output class="out1">0.8</output> - коэффициент формы снеговых нагрузок, при угле наклона кровли α= <output class="out2" value="0">0</output>°;</p>
+        <p>С<sub>e</sub>=<output class="out3">1</output> - коэффициент окружающей среды, определяющий уменьшение или увеличение снеговой нагрузки на грунт;<output class="out2"></output></p>
+        <p>C<sub>t</sub>= 1 - температурный коэффициент, определяющий уменьшение снеговой нагрузкина покрытие в зависимости от теплового потока через покрытие, вызывающего таяние снега;</p>
+        <p>S<sub>k</sub>=<output class="out6" >1.35</output> кПа - характеристическое значение снеговой нагрузки на грунт в зависимости от высоты местности над уровнем моря А= <output class="out5">140</output> м, для выбранного снегового района;</p>
+        <p>k<sub>FL</sub>=<output class="out7" >1</output> - коэффициент последствий,принимаемый в зависимости от класса последствий;</p>
+        <p>Тогда значение действующей неговой нагрузки равно:</p>
+         <p>S=μ<sub>i</sub>·C<sub>e</sub>·C<sub>t</sub>·S<sub>k</sub>·k<sub>FL</sub>= <output class="out4" >1.08</output> кПа</p>
+        <script src="script.js"></script>
+    </body>
+</html>
